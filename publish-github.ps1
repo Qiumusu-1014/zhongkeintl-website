@@ -10,6 +10,9 @@ if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
 }
 
 gh auth status
+if ($LASTEXITCODE -ne 0) {
+  throw "GitHub CLI is not logged in. Run: gh auth login"
+}
 
 if (-not (git rev-parse --is-inside-work-tree 2>$null)) {
   throw "Run this script inside the website repository folder."
@@ -17,7 +20,8 @@ if (-not (git rev-parse --is-inside-work-tree 2>$null)) {
 
 $remote = git remote get-url origin 2>$null
 if (-not $remote) {
-  gh repo create $RepoName --$Visibility --source . --remote origin --push
+  $visibilityFlag = "--$Visibility"
+  gh repo create $RepoName $visibilityFlag --source . --remote origin --push
 } else {
   git push -u origin main
 }
