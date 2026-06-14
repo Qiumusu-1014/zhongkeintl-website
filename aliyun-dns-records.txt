@@ -1,0 +1,71 @@
+Domain: zhongkeintl.com
+DNS platform: Alibaba Cloud DNS
+Website host: GitHub Pages
+Email: Alibaba Mail China site
+
+Add or confirm these website records:
+
+Host: @
+Type: A
+Value: 185.199.108.153
+
+Host: @
+Type: A
+Value: 185.199.109.153
+
+Host: @
+Type: A
+Value: 185.199.110.153
+
+Host: @
+Type: A
+Value: 185.199.111.153
+
+Host: www
+Type: CNAME
+Value: <your GitHub username or organization>.github.io
+
+Confirm these Alibaba Mail records:
+
+Host: @
+Type: MX
+Priority: 5
+Value: mx1.qiye.aliyun.com
+
+Host: @
+Type: MX
+Priority: 10
+Value: mx2.qiye.aliyun.com
+
+Host: @
+Type: MX
+Priority: 15
+Value: mx3.qiye.aliyun.com
+
+Host: @
+Type: TXT
+Value: v=spf1 include:spf.qiye.aliyun.com -all
+
+Host: mail
+Type: CNAME
+Value: qiye.aliyun.com
+
+Host: imap
+Type: CNAME
+Value: imap.qiye.aliyun.com
+
+Host: smtp
+Type: CNAME
+Value: smtp.qiye.aliyun.com
+
+Host: pop3
+Type: CNAME
+Value: pop.qiye.aliyun.com
+
+Add later after mailbox is working:
+
+Host: _dmarc
+Type: TXT
+Value: v=DMARC1; p=none; rua=mailto:postmaster@zhongkeintl.com
+
+DKIM must be generated in Alibaba Mail admin console. Do not copy a template value.
