@@ -589,6 +589,69 @@ h2 {
   font-size: 14px;
 }
 
+.visual-section {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(235, 231, 221, 0.44)),
+    var(--paper);
+}
+
+.reference-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.reference-grid.is-four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.reference-card {
+  overflow: hidden;
+  border: 1px solid rgba(16, 19, 26, 0.1);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 22px 70px rgba(16, 19, 26, 0.13);
+}
+
+.reference-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  filter: saturate(0.94) contrast(1.04);
+}
+
+.reference-card-body {
+  min-height: 178px;
+  padding: 22px;
+}
+
+.reference-card-body span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 16px;
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 850;
+  background: linear-gradient(135deg, var(--graphite), var(--steel));
+  border-radius: 50%;
+}
+
+.reference-card-body h3 {
+  margin-bottom: 8px;
+  font-size: clamp(19px, 1.6vw, 24px);
+  line-height: 1.18;
+}
+
+.reference-card-body p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
 .process-grid,
 .flow-grid {
   display: grid;
@@ -763,6 +826,7 @@ body[data-lang="en"] .contact p {
 body[data-lang="en"] .service-card p,
 body[data-lang="en"] .service-points,
 body[data-lang="en"] .project-card-content p,
+body[data-lang="en"] .reference-card-body p,
 body[data-lang="en"] .process-item span,
 body[data-lang="en"] .flow-item span,
 body[data-lang="en"] .principle-card span {
@@ -792,6 +856,8 @@ body[data-lang="en"] .principle-card span {
   .services,
   .card-grid,
   .project-gallery,
+  .reference-grid,
+  .reference-grid.is-four,
   .scenario-grid,
   .principles-grid {
     grid-template-columns: 1fr;
