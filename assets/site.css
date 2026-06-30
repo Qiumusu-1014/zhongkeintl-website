@@ -589,6 +589,79 @@ h2 {
   font-size: 14px;
 }
 
+.capsule-section {
+  padding-top: clamp(58px, 7vw, 86px);
+  padding-bottom: clamp(58px, 7vw, 86px);
+  background:
+    linear-gradient(135deg, rgba(16, 19, 26, 0.03), rgba(200, 155, 88, 0.09)),
+    var(--paper);
+}
+
+.capsule-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.72fr);
+  overflow: hidden;
+  color: var(--ink);
+  border: 1px solid rgba(16, 19, 26, 0.1);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: var(--shadow);
+}
+
+.capsule-card figure {
+  position: relative;
+  min-height: 320px;
+  margin: 0;
+  overflow: hidden;
+  background: var(--graphite);
+}
+
+.capsule-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+  filter: saturate(0.92) contrast(1.03);
+  transform: scale(1.01);
+  transition: transform 700ms ease, filter 700ms ease;
+}
+
+.capsule-card:hover img {
+  filter: saturate(1) contrast(1.06);
+  transform: scale(1.045);
+}
+
+.capsule-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(28px, 5vw, 56px);
+}
+
+.capsule-content h2 {
+  margin: 12px 0 18px;
+}
+
+.capsule-content p {
+  max-width: 540px;
+  margin-bottom: 30px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.capsule-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-height: 50px;
+  padding: 0 22px;
+  color: #17130d;
+  font-weight: 850;
+  background: var(--champagne);
+  border-radius: var(--radius);
+}
+
 .visual-section {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.34), rgba(235, 231, 221, 0.44)),
@@ -856,6 +929,7 @@ body[data-lang="en"] .principle-card span {
   .services,
   .card-grid,
   .project-gallery,
+  .capsule-card,
   .reference-grid,
   .reference-grid.is-four,
   .scenario-grid,
@@ -880,6 +954,11 @@ body[data-lang="en"] .principle-card span {
   .feature-layout,
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+
+  .capsule-card figure,
+  .capsule-card img {
+    min-height: 260px;
   }
 }
 
@@ -945,6 +1024,7 @@ body[data-lang="en"] .principle-card span {
   .info-card,
   .material,
   .scenario-card,
+  .capsule-content,
   .principle-card {
     padding: 22px;
   }

@@ -87,7 +87,12 @@ const dictionary = {
       gallery3Title: "能源园区咨询",
       gallery3Copy: "光伏、储能、微电网和园区能源基础设施咨询场景。",
       gallery4Title: "跨境项目沟通",
-      gallery4Copy: "会议简报、伙伴沟通、行动清单和项目推进的商务协同场景。"
+      gallery4Copy: "会议简报、伙伴沟通、行动清单和项目推进的商务协同场景。",
+      capsuleTitle: "中科太空舱",
+      capsuleIntro: "智能科技、模块化设计与可持续空间产品，面向文旅、商业、公共服务与应急保障场景。",
+      capsuleButton: "访问中科太空舱官网",
+      capsuleAlt: "中科太空舱智能模块化空间产品",
+      capsuleAria: "访问中科太空舱官网"
     },
     en: {
       pageTitle: "Zhongke International | Hong Kong Advisory & Project Coordination",
@@ -138,7 +143,12 @@ const dictionary = {
       gallery3Title: "Energy Park Advisory",
       gallery3Copy: "Consulting scenes for solar, storage, microgrids, and park-level energy infrastructure.",
       gallery4Title: "Cross-border Project Communication",
-      gallery4Copy: "Executive coordination scenes for briefings, partner discussions, action lists, and project advancement."
+      gallery4Copy: "Executive coordination scenes for briefings, partner discussions, action lists, and project advancement.",
+      capsuleTitle: "ZK Smart Capsule",
+      capsuleIntro: "Smart modular space products for hospitality, commercial, public service, and emergency support scenarios.",
+      capsuleButton: "Visit ZK Smart Capsule",
+      capsuleAlt: "ZK Smart Capsule smart modular space product",
+      capsuleAria: "Visit ZK Smart Capsule website"
     }
   },
   emergency: {
