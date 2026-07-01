@@ -602,25 +602,30 @@ h2 {
     var(--paper);
 }
 
-.partner-strip {
+.partner-groups {
   display: grid;
-  grid-template-columns: minmax(180px, 0.22fr) 1fr;
+  gap: 14px;
+}
+
+.partner-panel {
+  display: grid;
+  grid-template-columns: minmax(150px, 0.18fr) 1fr;
   gap: clamp(20px, 4vw, 44px);
   align-items: center;
-  padding: clamp(22px, 3vw, 30px);
+  padding: clamp(18px, 2.4vw, 26px);
   border: 1px solid rgba(16, 19, 26, 0.1);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.72);
   box-shadow: 0 22px 64px rgba(16, 19, 26, 0.08);
 }
 
-.partner-strip h2 {
-  font-size: clamp(24px, 2.6vw, 38px);
+.partner-panel h2 {
+  font-size: clamp(22px, 2.2vw, 32px);
 }
 
 .partner-logo-wall {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(104px, 1fr));
   gap: 10px;
 }
 
@@ -1009,7 +1014,7 @@ body[data-lang="en"] .principle-card span {
   .services,
   .card-grid,
   .project-gallery,
-  .partner-strip,
+  .partner-panel,
   .capsule-card,
   .reference-grid,
   .reference-grid.is-four,
@@ -1105,7 +1110,7 @@ body[data-lang="en"] .principle-card span {
     display: none;
   }
 
-  .partner-strip {
+  .partner-panel {
     padding: 20px;
   }
 
