@@ -594,108 +594,66 @@ h2 {
 }
 
 .partners-section {
-  padding-top: clamp(58px, 7vw, 88px);
+  padding-top: clamp(34px, 5vw, 58px);
+  padding-bottom: clamp(34px, 5vw, 58px);
   background:
     linear-gradient(180deg, rgba(247, 245, 239, 0.72), rgba(255, 255, 255, 0.9)),
     repeating-linear-gradient(90deg, rgba(16, 19, 26, 0.045) 0 1px, transparent 1px 84px),
     var(--paper);
 }
 
-.partner-group {
-  margin-top: clamp(34px, 5vw, 56px);
-}
-
-.partner-group:first-of-type {
-  margin-top: 0;
-}
-
-.partner-group-head {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 18px;
-  margin-bottom: 18px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid rgba(16, 19, 26, 0.14);
-}
-
-.partner-group-head h3 {
-  margin: 0;
-  font-size: clamp(22px, 2.2vw, 34px);
-  line-height: 1.1;
-}
-
-.partner-grid {
+.partner-strip {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.partner-card {
-  display: grid;
-  min-height: 214px;
-  padding: 12px;
+  grid-template-columns: minmax(180px, 0.22fr) 1fr;
+  gap: clamp(20px, 4vw, 44px);
+  align-items: center;
+  padding: clamp(22px, 3vw, 30px);
   border: 1px solid rgba(16, 19, 26, 0.1);
   border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 22px 58px rgba(16, 19, 26, 0.08);
-  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 22px 64px rgba(16, 19, 26, 0.08);
 }
 
-.partner-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(200, 155, 88, 0.46);
-  box-shadow: 0 28px 68px rgba(16, 19, 26, 0.12);
+.partner-strip h2 {
+  font-size: clamp(24px, 2.6vw, 38px);
 }
 
-.partner-logo {
+.partner-logo-wall {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.logo-tile {
   position: relative;
   display: grid;
   place-items: center;
-  height: 104px;
-  margin-bottom: 18px;
-  padding: 18px;
+  height: 70px;
+  padding: 14px;
   overflow: hidden;
   border-radius: 6px;
   border: 1px solid rgba(16, 19, 26, 0.08);
 }
 
-.partner-logo.is-light {
+.logo-tile.is-light {
   background:
     linear-gradient(135deg, rgba(255, 255, 255, 0.94), rgba(242, 239, 232, 0.88));
 }
 
-.partner-logo.is-dark {
+.logo-tile.is-dark {
   border-color: rgba(255, 255, 255, 0.1);
   background:
     radial-gradient(circle at 18% 12%, rgba(200, 155, 88, 0.16), transparent 28%),
     linear-gradient(135deg, #111318 0%, #202735 100%);
 }
 
-.partner-logo img {
+.logo-tile img {
   position: absolute;
-  inset: 18px;
-  width: calc(100% - 36px);
-  height: calc(100% - 36px);
+  inset: 12px;
+  width: calc(100% - 24px);
+  height: calc(100% - 24px);
   object-fit: contain;
   object-position: center;
-}
-
-.partner-card strong {
-  display: block;
-  min-height: 52px;
-  color: var(--ink);
-  font-size: 17px;
-  line-height: 1.28;
-}
-
-.partner-card span {
-  display: block;
-  align-self: end;
-  margin-top: 10px;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.4;
 }
 
 .capsule-section {
@@ -704,6 +662,19 @@ h2 {
   background:
     linear-gradient(135deg, rgba(16, 19, 26, 0.03), rgba(200, 155, 88, 0.09)),
     var(--paper);
+}
+
+.capsule-featured {
+  margin-top: -1px;
+  padding-top: clamp(42px, 5vw, 70px);
+  padding-bottom: clamp(42px, 5vw, 70px);
+  background:
+    linear-gradient(180deg, rgba(247, 245, 239, 0.98), rgba(235, 231, 221, 0.72)),
+    var(--paper);
+}
+
+.capsule-featured .capsule-card {
+  border-color: rgba(200, 155, 88, 0.28);
 }
 
 .capsule-card {
@@ -1011,8 +982,7 @@ body[data-lang="en"] .project-card-content p,
 body[data-lang="en"] .reference-card-body p,
 body[data-lang="en"] .process-item span,
 body[data-lang="en"] .flow-item span,
-body[data-lang="en"] .principle-card span,
-body[data-lang="en"] .partner-card span {
+body[data-lang="en"] .principle-card span {
   line-height: 1.55;
 }
 
@@ -1039,8 +1009,7 @@ body[data-lang="en"] .partner-card span {
   .services,
   .card-grid,
   .project-gallery,
-  .partner-grid,
-  .company-grid,
+  .partner-strip,
   .capsule-card,
   .reference-grid,
   .reference-grid.is-four,
@@ -1066,6 +1035,10 @@ body[data-lang="en"] .partner-card span {
   .feature-layout,
   .contact-layout {
     grid-template-columns: 1fr;
+  }
+
+  .partner-logo-wall {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .capsule-card figure,
@@ -1132,9 +1105,16 @@ body[data-lang="en"] .partner-card span {
     display: none;
   }
 
-  .partner-group-head {
-    display: grid;
-    align-items: start;
+  .partner-strip {
+    padding: 20px;
+  }
+
+  .partner-logo-wall {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .logo-tile {
+    height: 56px;
   }
 
   .service-body,
