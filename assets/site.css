@@ -76,23 +76,20 @@ p {
 }
 
 .brand {
-  display: inline-grid;
-  gap: 2px;
+  display: inline-flex;
+  align-items: center;
   justify-self: start;
+  width: clamp(178px, 16vw, 236px);
+  padding: 7px 11px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.18);
 }
 
-.brand strong {
-  font-size: 20px;
-  line-height: 1.1;
-  font-weight: 760;
-  letter-spacing: 0;
-}
-
-.brand span {
-  color: rgba(255, 255, 255, 0.64);
-  font-size: 11px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.brand-logo {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .main-nav {
@@ -1062,10 +1059,8 @@ body[data-lang="en"] .principle-card span {
 
   .brand {
     min-width: 0;
-  }
-
-  .brand strong {
-    font-size: 18px;
+    width: min(176px, 46vw);
+    padding: 6px 9px;
   }
 
   .nav-contact {
