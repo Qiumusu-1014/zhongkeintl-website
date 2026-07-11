@@ -1,31 +1,39 @@
 Domain: zhongkeintl.com
 DNS platform: Alibaba Cloud DNS
-Website host: GitHub Pages
+Website host: OpenAI Sites
 Email: Alibaba Mail China site
 
-Add or confirm these website records:
+Active website records:
 
 Host: @
 Type: A
-Value: 185.199.108.153
+Value: 162.159.143.30
 
 Host: @
 Type: A
-Value: 185.199.109.153
-
-Host: @
-Type: A
-Value: 185.199.110.153
-
-Host: @
-Type: A
-Value: 185.199.111.153
+Value: 172.66.3.26
 
 Host: www
 Type: CNAME
-Value: <your GitHub username or organization>.github.io
+Value: custom-domains.chatgpt.site
 
-Confirm these Alibaba Mail records:
+Host: _openai-site-verification
+Type: TXT
+Value: openai-site-verification=KYViui89sV09Od1EuXbE8CC0ShYksdqUlBvw2TdqHV0
+
+Host: _cf-custom-hostname
+Type: TXT
+Value: 7a58b262-bf3d-487c-a138-02baec62b679
+
+Host: _openai-site-verification.www
+Type: TXT
+Value: openai-site-verification=E0jG88ej1RG9dAX9QtBvIHU1oGlA6NKbVqZTFfdOGhw
+
+Host: _cf-custom-hostname.www
+Type: TXT
+Value: 8311d630-5aa9-4fdc-bbdc-dbd81d513ff6
+
+Do not remove these Alibaba Mail records:
 
 Host: @
 Type: MX
@@ -44,7 +52,7 @@ Value: mx3.qiye.aliyun.com
 
 Host: @
 Type: TXT
-Value: v=spf1 include:spf.qiye.aliyun.com -all
+Value: v=spf1 include:spf.qiye.aliyun.com ~all
 
 Host: mail
 Type: CNAME
